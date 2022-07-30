@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="463.0" maxWidth="777.0" minHeight="388.0" minWidth="476.0" prefHeight="435.0" prefWidth="476.0" style="-fx-background-color: #2c344b; -fx-border-color: #4D008E; -fx-border-width: 1;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.najah.easyproject.SearchController">
+  <TableView fx:id="table" layoutX="-5.0" layoutY="108.0" maxHeight="151.0" maxWidth="482.0" minHeight="145.0" prefHeight="151.0" prefWidth="482.0" style="-fx-background-color: #6C9293;" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="108.0">
+    <columns>
+      <TableColumn fx:id="idColumn" maxWidth="73.0" minWidth="50.0" prefWidth="69.0" style="-fx-background-color: #6C9293; -fx-border-color: #AAA; -fx-background-radius: 5; -fx-alignment: CENTER;" text="ID" />
+      <TableColumn fx:id="nameColumn" maxWidth="174.0" minWidth="100.0" prefWidth="139.0" style="-fx-background-color: #6C9293; -fx-border-color: #AAA; -fx-background-radius: 5; -fx-alignment: CENTER;" text="Price" />
+      <TableColumn fx:id="amountColumn" maxWidth="197.0" minWidth="100.0" prefWidth="167.0" style="-fx-background-color: #6C9293; -fx-border-color: #AAA; -fx-background-radius: 5; -fx-alignment: CENTER;" text="Name" />
+      <TableColumn fx:id="priceColumn" maxWidth="201.0" minWidth="100.0" prefWidth="106.0" style="-fx-background-color: #6C9293; -fx-border-color: #AAA; -fx-background-radius: 5; -fx-alignment: CENTER;" text="Amount" />
+    </columns>
+  </TableView>
+  <AnchorPane layoutX="-6.0" layoutY="307.0" minWidth="258.0" prefHeight="140.0" prefWidth="496.0" style="-fx-background-color: #131022; -fx-border-color: #16bab2; -fx-border-radius: 5; -fx-border-width: 2;" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="-7.0" AnchorPane.topAnchor="306.0">
+    <cursor>
+      <Cursor fx:constant="DEFAULT" />
+    </cursor>
+    <TextField fx:id="ID" disable="true" layoutX="79.0" layoutY="20.0" prefHeight="30.0" prefWidth="130.0" promptText="ID" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="20.0">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </TextField>
+    <TextField fx:id="Price" disable="true" layoutX="310.0" layoutY="54.0" prefHeight="30.0" prefWidth="130.0" promptText="Amount" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="54.0">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </TextField>
+    <TextField fx:id="Amount" disable="true" layoutX="79.0" layoutY="58.0" prefHeight="31.0" prefWidth="130.0" promptText="Name" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="58.0">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </TextField>
+    <Button fx:id="editInfo" layoutX="183.0" layoutY="104.0" maxHeight="30.0" maxWidth="130.0" minHeight="30.0" minWidth="130.0" mnemonicParsing="false" onAction="#updateInfo" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #16bab2; -fx-background-radius: 5;" text="Edit Info" textFill="WHITE" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="103.0">
+      <font>
+        <Font size="15.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+    <Button fx:id="deleteUserButton" layoutX="352.0" layoutY="102.0" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="130.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ba1616; -fx-background-radius: 5;" text="Delete Product" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="102.0">
+      <font>
+        <Font size="15.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+      <TextField fx:id="Name" disable="true" layoutX="352.0" layoutY="19.0" prefHeight="30.0" prefWidth="130.0" promptText="Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="AddP" layoutX="19.0" layoutY="104.0" maxHeight="30.0" maxWidth="130.0" minHeight="30.0" minWidth="130.0" mnemonicParsing="false" onAction="#AddProduct" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #16bab2; -fx-background-radius: 5;" text="Add Product" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="31.0" fitWidth="40.0" layoutX="4.0" layoutY="-9.0" onMousePressed="#enableAdd" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/p.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="19.0" prefHeight="36.0" prefWidth="48.0" text="ID" textFill="#d70707">
+         <font>
+            <Font name="Kristen ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="58.0" prefHeight="31.0" prefWidth="48.0" text="Name" textFill="#d70707">
+         <font>
+            <Font name="Kristen ITC" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="266.0" layoutY="15.0" prefHeight="38.0" prefWidth="69.0" text="Price" textFill="#d70707">
+         <font>
+            <Font name="Kristen ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="267.0" layoutY="58.0" prefHeight="31.0" prefWidth="100.0" text="Amount" textFill="#d70707">
+         <font>
+            <Font name="Kristen ITC" size="16.0" />
+         </font>
+      </Label>
+  </AnchorPane>
+  <Circle fill="#fa4771" layoutX="462.0" layoutY="14.0" onMouseClicked="#logout" radius="5.0" stroke="#fa4771" strokeType="INSIDE" AnchorPane.leftAnchor="457.0" AnchorPane.topAnchor="9.0">
+    <cursor>
+      
+      <Cursor fx:constant="HAND" />
+    </cursor>
+  </Circle>
+  <Button fx:id="nextButton" layoutX="407.0" layoutY="260.0" mnemonicParsing="false" onAction="#next" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #42BD8D; -fx-background-radius: 5;" text="Next" textFill="WHITE" AnchorPane.rightAnchor="-16.0" AnchorPane.topAnchor="260.0">
+    <font>
+      <Font size="15.0" />
+    </font>
+    <cursor>
+      <Cursor fx:constant="HAND" />
+    </cursor>
+  </Button>
+  <Button fx:id="prevButton" layoutX="-12.0" layoutY="260.0" mnemonicParsing="false" onAction="#prev" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #D7D428; -fx-background-radius: 5;" text="Previous" textFill="WHITE">
+    <font>
+      <Font size="15.0" />
+    </font>
+    <cursor>
+      <Cursor fx:constant="HAND" />
+    </cursor>
+  </Button>
+  <ComboBox fx:id="searchBy" layoutX="14.0" layoutY="16.0" onAction="#changeSearchBy" prefHeight="30.0" prefWidth="100.0" promptText="Search By" style="-fx-background-color: #6C9293;" AnchorPane.topAnchor="16.0" />
+  <TextField fx:id="searchField" layoutX="124.0" layoutY="40.0" prefHeight="31.0" prefWidth="150.0" promptText="Search" AnchorPane.topAnchor="40.0">
+    <font>
+      <Font size="15.0" />
+    </font>
+  </TextField>
+ <Label fx:id="status" layoutX="274.0" layoutY="17.0" prefHeight="47.0" prefWidth="198.0" textFill="#16bab2" AnchorPane.bottomAnchor="371.0">
+   <font>
+     <Font size="15.0" />
+   </font>
+ </Label>
+   <ComboBox fx:id="TypePrice" layoutX="14.0" layoutY="69.0" onAction="#changeTypeBy" prefHeight="30.0" prefWidth="100.0" promptText="Type Price" style="-fx-background-color: #6C9293;" />
+   <Label layoutX="124.0" layoutY="75.0" prefHeight="36.0" prefWidth="150.0" text="Last Update Price" textFill="#d70707">
+      <font>
+         <Font name="Kristen ITC" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="Date" layoutX="274.0" layoutY="78.0" prefHeight="30.0" prefWidth="198.0" textFill="#d70707">
+      <font>
+         <Font name="Kristen ITC" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="443.0" layoutY="78.0" onMousePressed="#Refresh" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@images/Refresh.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

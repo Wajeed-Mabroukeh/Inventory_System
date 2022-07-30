@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minWidth="400.0" prefHeight="400.0" prefWidth="489.0" style="-fx-background-color: #131022; -fx-border-color: #16bab2; -fx-border-radius: 5; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.najah.easyproject.EmployeeProfileController">
+  <cursor>
+    <Cursor fx:constant="DEFAULT" />
+  </cursor>
+  <Line endX="100.0" layoutX="168.0" layoutY="74.0" startX="100.0" startY="270.0" stroke="#16bab2" strokeDashOffset="2.0" />
+  <Label fx:id="nameLabel" layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="277.0" text="Employe Profile" textFill="#16bab2">
+    <font>
+      <Font name="Chiller" size="43.0" />
+    </font>
+  </Label>
+  <Label layoutX="22.0" layoutY="84.0" prefHeight="27.0" prefWidth="218.0" text="Your Personal Information" textFill="#16bab2">
+    <font>
+      <Font size="18.0" />
+    </font>
+  </Label>
+   <ImageView fitHeight="145.0" fitWidth="218.0" layoutX="268.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-y: 1.4;">
+      <image>
+         <Image url="@images/Product.jpg" />
+      </image>
+   </ImageView>
+  <Circle fill="#fa4771" layoutX="470.0" layoutY="19.0" onMouseClicked="#logout" radius="5.0" stroke="#fa4771" strokeType="INSIDE">
+    <cursor>
+      <Cursor fx:constant="HAND" />
+    </cursor>
+  </Circle>
+  <Label fx:id="Last_Time1" layoutX="41.0" layoutY="272.0" prefHeight="25.0" prefWidth="218.0" textFill="#16bab2" AnchorPane.bottomAnchor="104.0">
+    <font>
+      <Font size="15.0" />
+    </font>
+  </Label>
+  <TextField fx:id="ID" disable="true" layoutX="38.0" layoutY="154.0" prefHeight="31.0" prefWidth="176.0" promptText="ID" AnchorPane.leftAnchor="36.0">
+    <font>
+      <Font size="15.0" />
+    </font>
+  </TextField>
+  <TextField fx:id="password" disable="true" layoutX="40.0" layoutY="214.0" prefHeight="31.0" prefWidth="176.0" promptText="Password" AnchorPane.leftAnchor="38.0">
+    <font>
+      <Font size="15.0" />
+    </font>
+  </TextField>
+  <Button fx:id="editInfo" layoutX="22.0" layoutY="312.0" mnemonicParsing="false" onAction="#updateInfo" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #16bab2; -fx-background-radius: 5;" text="Edit Info" textFill="WHITE" AnchorPane.leftAnchor="22.0">
+    <font>
+      <Font size="15.0" />
+    </font>
+    <cursor>
+      <Cursor fx:constant="HAND" />
+    </cursor>
+  </Button>
+  <Button layoutX="323.0" layoutY="312.0" mnemonicParsing="false" onAction="#goToEmployeesPage" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #D7D428; -fx-background-radius: 5;" text="Show Product" textFill="WHITE">
+    <font>
+      <Font size="15.0" />
+    </font>
+    <cursor>
+      <Cursor fx:constant="HAND" />
+    </cursor>
+  </Button>
+   <Label layoutX="14.0" layoutY="133.0" prefHeight="27.0" prefWidth="32.0" text="ID" textFill="#16bab2">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="14.0" layoutY="187.0" prefHeight="27.0" prefWidth="82.0" text="Password" textFill="#16bab2">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="18.0" layoutY="245.0" prefHeight="27.0" prefWidth="157.0" text="Last Access Time" textFill="#16bab2">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="status" layoutX="31.0" layoutY="356.0" prefHeight="30.0" prefWidth="230.0" textFill="#16bab2">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Label>
+</AnchorPane>
